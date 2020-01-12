@@ -1,5 +1,7 @@
+package lambada;
+
 import tink.core.Pair;
-using Lambda;
+using lambada.Lambda;
 
 typedef Duet = tink.core.Pair;
 
