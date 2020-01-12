@@ -1,0 +1,14 @@
+{
+  "name": "lambada",
+  "url": "https://github.com/emugel/lambada",
+  "license": "Public",
+  "tags": ["fp", "lambda"],
+  "description": "personal lambda",
+  "version": "0.0.1",
+  "releasenote": "first version",
+  "contributors": ["emugel"],
+  "dependencies": {
+      "tink_core":"0.24.0"
+  },
+  "classPath": ""
+}
