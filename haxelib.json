@@ -8,7 +8,7 @@
   "releasenote": "first version",
   "contributors": ["emugel"],
   "dependencies": {
-      "tink_core":"0.24.0"
+      "tink_core":"1.24.0"
   },
   "classPath": ""
 }
