@@ -3,7 +3,7 @@ package lambada;
 import tink.core.Pair;
 using lambada.Lambada.Lambda;
 
-typedef Duet = tink.core.Pair;
+typedef Duet<A,B> = tink.core.Pair<A,B>;
 
 /**
  * Personal FP lambda functions.
@@ -36,40 +36,6 @@ class Lambada {
             else e.b.push(t);
         }
         return m;
-    }
-
-    /**
-     * Given an Iterable<T> (that is sorted, whatever your criteria)
-     * give a chance to merge an element with its successor.
-     * You provide both the identity and reduction callback.
-     * If fidentity(a,b) is met, then both elements are replaced by result of
-     * freduction(a,b) in the returned list.
-     *
-     * @example
-     * typedef Score = Int;
-     * var list : List<Duet<Date, Score>>() = ...;  // sorted by Date
-     * list
-     *      .map( duet -> new Duet<Date, Score>( 
-                            Std.int((duet.a.getTime() % 86400 * 1000.) / 1000) , 
-                            duet.b
-                         )
-            )
-            .reduce_maybe_with_next(
-                (duet1,duet2) -> duet1.a == duet2.a,
-                (duet1,duet2) -> new Duet( duet1.a, (duet1.b + duet2.b) / 2
-            )
-     * 
-     * You get a List of Timestamp (ignoring the time, keeping the day)
-     *   where all elements occurring on the same day will be reduced to 
-     *   one element, where the score is an average of their individual score.
-     * @endexample
-     */
-    public static function reduce_maybe_with_next<T>(
-        aT:Iterable<T>,
-        fidentity :(a:T, b:T)->Bool,
-        freduction:(a:T, b:T)->T
-    ) : List<T> {
-
     }
 
     /**
