@@ -5,10 +5,10 @@
   "tags": ["fp", "lambda"],
   "description": "personal lambda",
   "version": "0.0.1",
-  "releasenote": "first version",
+  "releasenote": "with Duet, Trio...",
   "contributors": ["emugel"],
   "dependencies": {
-      "tink_core":"1.24.0"
+      "tink_core":"1.25.0"
   },
   "classPath": "."
 }
