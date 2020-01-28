@@ -3,7 +3,6 @@ package lambada;
 import tink.core.Pair;
 using lambada.Lambada.Lambda;
 
-typedef Duet<A,B> = tink.core.Pair<A,B>;
 
 /**
  * Personal FP lambda functions.
